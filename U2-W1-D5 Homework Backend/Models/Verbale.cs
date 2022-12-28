@@ -107,7 +107,7 @@ namespace U2_W1_D5_Homework_Backend.Models
                 command.Parameters.AddWithValue("@IMPORTO", verb.Importo);
                 command.Parameters.AddWithValue("@DECURTAMENTOPUNTI", verb.DecurtamentoPunti);
                 command.Parameters.AddWithValue("@IDVIOLAZIONE", verb.IDViolazione.IDViolazione);
-                command.CommandText = $"Update VERBALE set DataViolazione = @DATAVIOLAZIONE, IndirizzoViolazione = @INDIRIZZOVIOLAZIONE, NominativoAgente = @NOMINATIVOAGENTE, DataTrascrizioneVerbale = @DATATRACSRIZIONE, Importo = @IMPORTO, DecurtamentoPunti = @DECURTAMENTOPUNTI, IDViolazione = @IDVIOLAZIONE where IDVerbale = {id}";
+                command.CommandText = $"Update VERBALE set DataViolazione = @DATAVIOLAZIONE, IndirizzoViolazione = @INDIRIZZOVIOLAZIONE, NominativoAgente = @NOMINATIVOAGENTE, DataTrascrizioneVerbale = @DATATRASCRIZIONE, Importo = @IMPORTO, DecurtamentoPunti = @DECURTAMENTOPUNTI, IDViolazione = @IDVIOLAZIONE where IDVerbale = {id}";
                 command.Connection = con;
                 command.ExecuteNonQuery();
             }
