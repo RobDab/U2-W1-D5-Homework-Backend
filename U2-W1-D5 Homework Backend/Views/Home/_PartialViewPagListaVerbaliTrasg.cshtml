@@ -1,0 +1,47 @@
+﻿@model IEnumerable<U2_W1_D5_Homework_Backend.Models.Verbale>
+
+<table class="table table-striped table-primary table-hover my-5">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DataViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NominativoAgente)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Importo)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.DecurtamentoPunti)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDViolazione.Descrizione)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataViolazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NominativoAgente)
+        </td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.Importo)
+        </td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.DecurtamentoPunti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDViolazione.Descrizione)
+        </td>
+        <td class="d-flex justify-content-end">
+            @*@Html.HiddenFor(modelItem => item.IDViolazione.IDViolazione, new {IDViolazione=item.IDViolazione.IDViolazione})*@ @* Volevo provare a prendere l'idviolazione come parametro all'action PagModificaVerb ma dà sempre null *@
+            @Html.ActionLink("Modifica", "PagModificaVerb", new { id = item.IDVerbale }, new { @class = "btn btn-sm btn-warning me-1" })
+        </td>
+    </tr>
+}
+
+</table>

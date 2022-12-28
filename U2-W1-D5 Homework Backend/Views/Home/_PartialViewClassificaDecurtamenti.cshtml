@@ -1,0 +1,31 @@
+﻿@model IEnumerable<U2_W1_D5_Homework_Backend.Models.Verbale>
+
+<table class="table table-striped table-hover table-primary">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDAnagrafica.Cognome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDAnagrafica.Nome)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.DecurtamentoPunti)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDAnagrafica.Cognome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDAnagrafica.Nome)
+            </td>
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.DecurtamentoPunti)
+            </td>
+        </tr>
+    }
+
+</table>

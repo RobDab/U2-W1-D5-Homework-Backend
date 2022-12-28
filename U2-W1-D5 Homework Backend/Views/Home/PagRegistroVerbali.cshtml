@@ -1,0 +1,64 @@
+﻿@model U2_W1_D5_Homework_Backend.Models.Verbale
+
+@{
+    ViewBag.Title = "PagRegistroVerbali";
+}
+
+<h2 class="text-center text-primary mt-5 mb-3">Numero Verbali</h2>
+
+<p class="text-center fs-2 fw-bold text-primary my-0">@ViewBag.NumeroVerbali</p>
+
+<div class="container my-5">
+    <div class="row my-1">
+        <div class="col-6">
+            <p>
+                <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVerbali" aria-expanded="false" aria-controls="collapseVerbali">
+                    Trasgressori con più verbali trascritti
+                </button>
+            </p>
+            <div class="collapse" id="collapseVerbali">
+                <div class="card card-body">
+                    @{Html.RenderAction("PartialViewClassificaVerbali");}
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <p>
+                <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDecurtamenti" aria-expanded="false" aria-controls="collapseDecurtamenti">
+                    Trasgressori con più punti decurtati
+                </button>
+            </p>
+            <div class="collapse" id="collapseDecurtamenti">
+                <div class="card card-body">
+                    @{Html.RenderAction("PartialViewClassificaDecurtamenti");}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row my-1">
+        <div class="col-6">
+            <p>
+                <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDecurtamentiMaggiori" aria-expanded="false" aria-controls="collapseDecurtamentiMaggiori">
+                    Verbali filtrati per punti decurtati 
+                </button>
+            </p>
+            <div class="collapse" id="collapseDecurtamentiMaggiori">
+                <div class="card card-body">
+                    @{Html.RenderAction("PartialViewClassificaDecurtamentiMaggioriDi");}
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <p>
+                <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseImportiMaggiori" aria-expanded="false" aria-controls="collapseImportiMaggiori">
+                    Violazioni filtrate per importo
+                </button>
+            </p>
+            <div class="collapse" id="collapseImportiMaggiori">
+                <div class="card card-body">
+                    @{Html.RenderAction("PartialViewClassificaImportiMaggioriDi");}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
