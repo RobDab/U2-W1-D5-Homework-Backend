@@ -83,6 +83,12 @@ namespace U2_W1_D5_Homework_Backend.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult PagCancellaVerb(int id)
+        {
+            Verbale.DeleteVerbale(id);
+            return RedirectToAction("Index");
+        }
+
         // Pagina lista violazioni, pagina aggiungi violazioni
         public ActionResult Violazioni()
         {

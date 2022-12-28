@@ -40,6 +40,7 @@
         <td class="d-flex justify-content-end">
             @*@Html.HiddenFor(modelItem => item.IDViolazione.IDViolazione, new {IDViolazione=item.IDViolazione.IDViolazione})*@ @* Volevo provare a prendere l'idviolazione come parametro all'action PagModificaVerb ma dà sempre null *@
             @Html.ActionLink("Modifica", "PagModificaVerb", new { id = item.IDVerbale }, new { @class = "btn btn-sm btn-warning me-1" })
+            @Html.ActionLink("Elimina", "PagCancellaVerb", new { id = item.IDVerbale }, new { @class = "btn btn-sm btn-danger me-1" })
         </td>
     </tr>
 }

@@ -119,6 +119,21 @@ namespace U2_W1_D5_Homework_Backend.Models
             return verb;
         }
 
+        public static void DeleteVerbale(int id)
+        {
+            SqlConnection con = ConnectionClass.GetConnectionDB();
+            try
+            {
+                con.Open();
+                SqlDataReader reader = ConnectionClass.GetReader($"Delete from VERBALE where IDVerbale = {id}", con);
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+            }
+            con.Close();
+        }
+
         public static List<Verbale> GetVerbaliChart ()
         {
             SqlConnection con = ConnectionClass.GetConnectionDB();
