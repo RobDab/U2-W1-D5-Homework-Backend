@@ -121,11 +121,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ConnectionClass.cs" />
+    <Compile Include="Models\CustomRole.cs" />
+    <Compile Include="Models\NoSpaceAttribute.cs" />
     <Compile Include="Models\Trasgressore.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\Verbale.cs" />
     <Compile Include="Models\Violazione.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -215,6 +220,9 @@
     <Content Include="Views\Home\PagModificaTrasg.cshtml" />
     <Content Include="Views\Home\PagModificaViolazione.cshtml" />
     <Content Include="Views\Home\PagModificaVerb.cshtml" />
+    <Content Include="Views\Login\SignIn.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

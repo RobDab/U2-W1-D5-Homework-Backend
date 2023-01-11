@@ -7,14 +7,17 @@ using U2_W1_D5_Homework_Backend.Models;
 
 namespace U2_W1_D5_Homework_Backend.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
+        
         // Pagina home con lista trasgressori (Index), pagina aggiungi trasgressore (Create), pagina dettagli trasgressore, pagina aggiungi verbale, pagina modifica trasgressore
         public ActionResult Index()
         {
             return View(Trasgressore.GetTrasgressori());
         }
 
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {          
             return View();

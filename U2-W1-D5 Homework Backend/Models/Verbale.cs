@@ -13,14 +13,16 @@ namespace U2_W1_D5_Homework_Backend.Models
     {
         public int IDVerbale { get; set; }
         [DisplayName("Data Violazione")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        //[DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DataViolazione { get; set; }
         [DisplayName("Indirizzo Violazione")]
         public string IndirizzoViolazione { get; set; }
         [DisplayName("Agente")]
         public string NominativoAgente { get; set; }
         [DisplayName("Data Trascrizione")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DataTrascrizioneVerbale { get; set; }
         [DisplayName("Importo")]
         public decimal Importo { get; set; }

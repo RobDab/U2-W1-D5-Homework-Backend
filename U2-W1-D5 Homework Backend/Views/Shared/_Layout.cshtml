@@ -18,14 +18,20 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav under fs-6" style="margin-left: -320px;">
                     <li class="nav-item me-2">
-                        @Html.ActionLink("Home", "Index", "Home", new {@class="text-white me-2", style="text-decoration:none;"})
+                        @Html.ActionLink("Login", "SignIn", "Login", null, new { @class = "text-white me-2", style = "text-decoration:none;" })
                     </li>
                     <li class="nav-item me-2">
-                        @Html.ActionLink("Violazioni", "Violazioni", "Home", new { @class = "text-white me-2", style="text-decoration:none;" })
+                        @Html.ActionLink("Utenti", "Index", "Users", null, new { @class = "text-white me-2", style = "text-decoration:none;" })
                     </li>
                     <li class="nav-item me-2">
-                        @Html.ActionLink("Registro verbali", "PagRegistroVerbali", "Home", new { @class = "text-white me-2", style="text-decoration:none" })
-                    </li>                   
+                        @Html.ActionLink("Home", "Index", "Home", null, new { @class = "text-white me-2", style = "text-decoration:none;" })
+                    </li>
+                    <li class="nav-item me-2">
+                        @Html.ActionLink("Violazioni", "Violazioni", "Home", null, new { @class = "text-white me-2", style = "text-decoration:none;" })
+                    </li>
+                    <li class="nav-item me-2">
+                        @Html.ActionLink("Registro verbali", "PagRegistroVerbali", "Home", null, new { @class = "text-white me-2", style = "text-decoration:none" })
+                    </li>
                 </ul>
             </div>
         </div>
